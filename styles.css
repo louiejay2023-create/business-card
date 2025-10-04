@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui,Roboto;
+}
+
+body {
+  margin: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  width: 450px;
+  margin: 0 auto;
+  color: #2b2839;
+  background: #8ef2cc;
+  border-bottom: 10px solid #4dd9a3;
+  border-radius: 8px 8px 0 0;
+}
+
+.profile_pic {
+  border: 5px solid #4dd9a3;
+  width: 150px;
+  border-radius: 50%;
+}
+
+img {
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.info h4,
+.info p,
+.info h3 {
+  position: relative;
+  /* display: inline-block; */
+  color: #222;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* background swipe effect */
+.info h4::before,
+.info p::before,
+.info h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  background: #4dd9a3;
+  z-index: -1;
+  transition: width 0.3s ease;
+  /* border-radius: 5px; */
+}
+
+/* hover style */
+.info h4:hover,
+.info p:hover,
+.info h3:hover {
+  color: white;
+  transform: translateY(-3px); /* subtle lift effect */
+}
+
+/* background fills on hover */
+.info h4:hover::before,
+.info p:hover::before,
+.info h3:hover::before {
+  width: 100%;
+}
+
