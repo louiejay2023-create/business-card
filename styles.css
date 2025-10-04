@@ -4,9 +4,9 @@
   font-family: system-ui,Roboto;
 }
 
-body {
+/* body {
   margin: 20px;
-}
+} */
 
 .card {
   display: flex;
@@ -79,4 +79,5 @@ img:hover {
 .info h3:hover::before {
   width: 100%;
 }
+
 
